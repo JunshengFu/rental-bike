@@ -83,7 +83,7 @@ Gradient descent
 
 There are a lot of different error functions has been developed, and three commonly used error functions are listed. In this project, **mean square error** is used, since the prediction of the bike numbers is a regression problem.
 
-* **Mean Squared Error function** is usually used n a regression problem, where the output is a usually real-valued number, such as
+* **Mean Squared Error function** is usually used for regression problems, where the output is usually real-valued number, such as
 the number of bikes in this project, or weight/salary/etc.
 
 ![][error_MSE]
