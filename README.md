@@ -81,20 +81,19 @@ Gradient descent
 
 ##### (3) Error function
 
-* Regression Loss Function: Mean Squared Error Loss
-In a regression problem, the output is a usually real-valued number, such as
+There are a lot of different error functions has been developped, and three commonly used error functions are listed. In this project, **mean square error** is used, since the prediction of the bike numbers is a regression problem.
+
+* **Mean Squared Error function** is usually used n a regression problem, where the output is a usually real-valued number, such as
 the number of bikes in this project, or weight/salary/etc.
 
 ![][error_MSE]
 
-* Binary Classification Loss Function: Binary Cross-Entropy
-In binary classification problem, the output is usally true or false,
+* **Binary Cross-Entropy function** is usually used for the binary classification problem, where the output is usally true or false,
 e.g. university student admission (accept or not).
 
 ![][cross_entropy] 
 
-* Multi-class Classification Loss Function: Multi-Class Cross-Entropy Loss
-In multi-class classification problem, the network should be able to classify
+* **Multi-Class Cross-Entropy function** is usually used for the multi-class classification problem, where the network should be able to classify
 multiple classes, such as traffic-sign recoginition.
 
 ![][mult_class_cross_entropy]
