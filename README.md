@@ -51,5 +51,53 @@ on real two-year historical logs from [here](http://capitalbikeshare.com/system-
 [//]: # (Image References)
 [image1]: ./assets/data.png
 [image2]: ./assets/prediction.png
+[forward]: ./assets/forward.jpg
+[error_MSE]: ./assets/error_MSE.jpg
+[gradient_descent]: ./assets/gradient_descent.JPG
+[cross_entropy]: ./assets/cross_entropy.JPG
+[mult_class_cross_entropy]: ./assets/m_class.JPG
+
+----
+
+#### 5. Key Concepts
+
+In `simplenetwork.py`, there is a simple 3-layer network. In this network, we aim to go through and understand the detailed
+math for each of these concpets (e.g. forward pass, backward pass, error function, gradient descents), instead of looking into more advance networks to achieve the best performance.
+
+##### (1) Forward pass
+
+In forward pass, the input data are fed into the network and traversed
+through all neurons from the first layer to the last layer of the network.
+![][forward]
+
+##### (2) Backward pass (or backpropagation)
+
+In backward pass, it uses the graident descent algorithm to update the
+weights/bias in the network, and it runs from last layer backward to the first layer.
+
+Gradient descent
+
+![][gradient_descent]
+
+##### (3) Error function
+
+* Regression Loss Function: Mean Squared Error Loss
+In a regression problem, the output is a usually real-valued number, such as
+the number of bikes in this project, or weight/salary/etc.
+
+![][error_MSE]
+
+* Binary Classification Loss Function: Binary Cross-Entropy
+In binary classification problem, the output is usally true or false,
+e.g. university student admission (accept or not).
+
+![][cross_entropy] 
+
+* Multi-class Classification Loss Function: Multi-Class Cross-Entropy Loss
+In multi-class classification problem, the network should be able to classify
+multiple classes, such as traffic-sign recoginition.
+
+![][mult_class_cross_entropy]
+
 
 
