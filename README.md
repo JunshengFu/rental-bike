@@ -1,13 +1,13 @@
-# **Rental bike prediction** 
+# **Rental bike prediction**
 
 ## Objective
 
 Bike-sharing systems are popular choice among young generations to solve their last mile problem.
 As we know, bike-sharing rental process is highly correlated to the environmental and seasonal conditions, e.g. weather conditions,
-precipitation, day of week, season, hour of the day, etc. 
+precipitation, day of week, season, hour of the day, etc.
 
 This project uses machine learning to learn the bike-sharing rental patterns
-and predicts the number of bikes should be placed in a spot based on the environmental conditions. The data is based 
+and predicts the number of bikes should be placed in a spot based on the environmental conditions. The data is based
 on real two-year historical logs from [here](http://capitalbikeshare.com/system-data), and the dataset is organized and provided by [1].
 
 
@@ -26,7 +26,7 @@ on real two-year historical logs from [here](http://capitalbikeshare.com/system-
 * [main.ipynb](main.ipynb) is the main file that executes the code and presents related data.
 * [dataset/hour.csv](dataset/hour.csv) bike sharing counts aggregated on hourly basis for 17379 hours
 * [dataset/day.csv](dataset/day.csv) bike sharing counts aggregated on daily basis for 731 days
-* [assets](assets) a folder contains ploted figures.
+* [assets](assets) a folder contains plotted figures.
 
 #### 2. Dependencies & my environment
 
@@ -62,7 +62,7 @@ on real two-year historical logs from [here](http://capitalbikeshare.com/system-
 #### 5. Key Concepts
 
 In `simplenetwork.py`, there is a simple 3-layer network. In this network, we aim to go through and understand the detailed
-math for each of these concpets (e.g. forward pass, backward pass, error function, gradient descents), instead of looking into more advance networks to achieve the best performance.
+math for each of these concepts (e.g. forward pass, backward pass, error function, gradient descents), instead of looking into more advance networks to achieve the best performance.
 
 ##### (1) Forward pass
 
@@ -70,9 +70,9 @@ In forward pass, the input data are fed into the network and traversed
 through all neurons from the first layer to the last layer of the network.
 ![][forward]
 
-##### (2) Backward pass (or backpropagation)
+##### (2) Backward pass (or back-propagation)
 
-In backward pass, it uses the graident descent algorithm to update the
+In backward pass, it uses the gradient descent algorithm to update the
 weights/bias in the network, and it runs from last layer backward to the first layer.
 
 Gradient descent
@@ -81,23 +81,19 @@ Gradient descent
 
 ##### (3) Error function
 
-* Regression Loss Function: Mean Squared Error Loss
-In a regression problem, the output is a usually real-valued number, such as
+There are a lot of different error functions has been developed, and three commonly used error functions are listed. In this project, **mean square error** is used, since the prediction of the bike numbers is a regression problem.
+
+* **Mean Squared Error function** is usually used n a regression problem, where the output is a usually real-valued number, such as
 the number of bikes in this project, or weight/salary/etc.
 
 ![][error_MSE]
 
-* Binary Classification Loss Function: Binary Cross-Entropy
-In binary classification problem, the output is usally true or false,
+* **Binary Cross-Entropy function** is usually used for the binary classification problem, where the output is usually true or false,
 e.g. university student admission (accept or not).
 
-![][cross_entropy] 
+![][cross_entropy]
 
-* Multi-class Classification Loss Function: Multi-Class Cross-Entropy Loss
-In multi-class classification problem, the network should be able to classify
-multiple classes, such as traffic-sign recoginition.
+* **Multi-Class Cross-Entropy function** is usually used for the multi-class classification problem, where the network should be able to classify
+multiple classes, such as traffic-sign recognition.
 
 ![][mult_class_cross_entropy]
-
-
-
