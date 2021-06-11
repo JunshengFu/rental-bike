@@ -75,7 +75,7 @@ through all neurons from the first layer to the last layer of the network.
 
 ##### (2) Error function
 
-There are a lot of different error functions has been developed, and three commonly used error functions are listed. In this project, **mean square error** is used, since the prediction of the bike numbers is a regression problem.
+There are a lot of [different error functions](https://pytorch.org/docs/stable/nn.html#loss-functions) has been developed, and three commonly used error functions are listed. In this project, **mean square error** is used, since the prediction of the bike numbers is a regression problem.
 
 * **Mean Squared Error function** is usually used for regression problems, where the output is usually real-valued number, such as
 the number of bikes in this project, or weight/salary/etc.
