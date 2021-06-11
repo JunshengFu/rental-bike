@@ -56,6 +56,9 @@ on real two-year historical logs from [here](http://capitalbikeshare.com/system-
 [gradient_descent]: ./assets/gradient_descent.JPG
 [cross_entropy]: ./assets/cross_entropy.JPG
 [mult_class_cross_entropy]: ./assets/m_class.JPG
+[chain_rule]: ./assets/chain_rule.jpg
+[error_term]: ./assets/error_term.jpg
+[backprog_algo]: ./assets/backprog_algo.jpg
 
 ----
 
@@ -70,16 +73,7 @@ In forward pass, the input data are fed into the network and traversed
 through all neurons from the first layer to the last layer of the network.
 ![][forward]
 
-##### (2) Backward pass (or back-propagation)
-
-In backward pass, it uses the gradient descent algorithm to update the
-weights/bias in the network, and it runs from last layer backward to the first layer.
-
-Gradient descent
-
-![][gradient_descent]
-
-##### (3) Error function
+##### (2) Error function
 
 There are a lot of different error functions has been developed, and three commonly used error functions are listed. In this project, **mean square error** is used, since the prediction of the bike numbers is a regression problem.
 
@@ -97,3 +91,24 @@ e.g. university student admission (accept or not).
 multiple classes, such as traffic-sign recognition.
 
 ![][mult_class_cross_entropy]
+
+##### (3) Backward pass (or back-propagation)
+
+In backward pass, it uses the **gradient descent algorithm** and **chain rule** to update the
+weights/bias in the network, and it runs from last layer backward to the first layer.
+
+* **Gradient descent**
+
+![][gradient_descent]
+
+* **Chain rule**
+
+![][chain_rule]
+
+* **How to update weight**:
+taking the last two layers (last hidden layer & output layer) as an example, to update the weights to hidden layer using gradient descent, we need to know how much error each of the hidden units contributed to the final output. Since the output of a layer is determined by the weights between layers, the error resulting from units is scaled by the weights going forward from hidden layer to the output layer. Since we know the error at the output, we can use the weights to work backwards to hidden layer.
+
+![][error_term]
+
+![][backprog_algo]
+
